@@ -14,9 +14,11 @@ end
 
 	function Button:update_view()
 		local img=nil
-		if(self.status=="pressed") then img=self.style.pressed
+		if(self.status=="pressed") then img=self.style.down
 		elseif(self.status=="over") then img=self.style.over end
-		if(img==nil)then img=self.style.normal end
+		
+		if(img==nil)then img=self.style.up end
+		
 		gui.play_flipbook(self.root_node, img)
 	end
 return Button
