@@ -12,6 +12,7 @@ actor can change style(the main idea that stage changing style)
 --]]
 local Actor = class("Actor")
 function Actor:initialize(root_id,style_id,default_style_name,nodes)
+	print("init actor")
 	assert(root_id,"root can't be nil")
 	assert(style_id,"style_id can't be nil")
 	assert(default_style_name,"default_style_name can't be nil")
@@ -20,6 +21,7 @@ function Actor:initialize(root_id,style_id,default_style_name,nodes)
 	local root_type=type(root)
 	self.root_id=root_id
 	if(nodes~=nil)then
+		print("init with table")
 		self:init_with_table(nodes)
 	else
 		self:init_with_string()

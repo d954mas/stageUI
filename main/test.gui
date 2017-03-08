@@ -11,8 +11,8 @@ background_color {
 }
 nodes {
   position {
-    x: 256.9452
-    y: 495.02313
+    x: 200.0
+    y: 600.0
     z: 0.0
     w: 1.0
   }
@@ -105,8 +105,8 @@ nodes {
 }
 nodes {
   position {
-    x: 640.0
-    y: 360.0
+    x: 400.0
+    y: 600.0
     z: 0.0
     w: 1.0
   }
@@ -175,7 +175,7 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "text"
+  text: "label"
   font: "system_font"
   id: "label/root"
   xanchor: XANCHOR_RIGHT
@@ -201,14 +201,15 @@ nodes {
   alpha: 1.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
+  overridden_fields: 8
   template_node_child: true
   text_leading: 1.0
   text_tracking: 0.0
 }
 nodes {
   position {
-    x: 758.8791
-    y: 528.77893
+    x: 200.0
+    y: 425.0
     z: 0.0
     w: 1.0
   }
@@ -237,11 +238,11 @@ nodes {
     w: 1.0
   }
   type: TYPE_TEMPLATE
-  id: "button1"
+  id: "text_button"
   layer: ""
   inherit_alpha: true
   alpha: 1.0
-  template: "/stageUI/elements/button/button.gui"
+  template: "/stageUI/elements/text_button/text_button.gui"
   template_node_child: false
 }
 nodes {
@@ -278,12 +279,12 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "gui/button_normal"
-  id: "button1/root"
+  id: "text_button/root"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
-  parent: "button1"
+  parent: "text_button"
   layer: "background"
   inherit_alpha: true
   slice9 {
@@ -298,6 +299,70 @@ nodes {
   alpha: 1.0
   template_node_child: true
   size_mode: SIZE_MODE_MANUAL
+}
+nodes {
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_TEXT
+  blend_mode: BLEND_MODE_ALPHA
+  text: "Text Button"
+  font: "system_font"
+  id: "text_button/text"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  outline {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  adjust_mode: ADJUST_MODE_FIT
+  line_break: false
+  parent: "text_button/root"
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  outline_alpha: 1.0
+  shadow_alpha: 1.0
+  overridden_fields: 8
+  template_node_child: true
+  text_leading: 1.0
+  text_tracking: 0.0
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

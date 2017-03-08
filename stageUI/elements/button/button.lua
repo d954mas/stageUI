@@ -4,7 +4,7 @@ local Button = Actor:subclass('Button')
 
 function Button:initialize(root,style,cb,nodes)
   Actor.initialize(self,root,style,"default_button_style",nodes)
-	self.cb=cb
+  self.cb=cb
 end
 
 
@@ -13,9 +13,10 @@ end
 	end
 
 	function Button:update_view()
-		local img=self.style.normal
+		local img=nil
 		if(self.status=="pressed") then img=self.style.pressed
 		elseif(self.status=="over") then img=self.style.over end
+		if(img==nil)then img=self.style.normal end
 		gui.play_flipbook(self.root_node, img)
 	end
 return Button

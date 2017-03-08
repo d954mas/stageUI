@@ -32,5 +32,5 @@ images {
   image: "/stageUI/dark_ui_export/radio_pressed.png"
 }
 margin: 0
-extrude_borders: 0
+extrude_borders: 2
 inner_padding: 0

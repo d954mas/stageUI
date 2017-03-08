@@ -11,6 +11,7 @@ local Label = Actor:subclass('Label')
 	end
 
 	function Label:update_view()
+		gui.set_color(self.root_node,self.style.font_color)
 		gui.set_font(self.root_node, self.style.font)
 		gui.set_scale(self.root_node, vmath.vector3(1 * self.style.font_scale))
 	end
