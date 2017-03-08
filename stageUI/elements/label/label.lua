@@ -2,17 +2,17 @@ local Actor = require "stageUI.elements.actor"
 
 local Label = Actor:subclass('Label')
 
- 	function Label:initialize(root_name,style)
-		Actor.initialize(self,root_name.."/label",style,"default_label_style")
+ 	function Label:initialize(root,style,nodes)
+		Actor.initialize(self,root,style,"default_label_style",nodes)
  	end
 
 	function Label:set_text(text)
-		print(self.root_node)
 		gui.set_text(self.root_node, text)
 	end
 
-	function Label:style_changed()
+	function Label:update_view()
 		gui.set_font(self.root_node, self.style.font)
 		gui.set_scale(self.root_node, vmath.vector3(1 * self.style.font_scale))
 	end
+
 return Label
