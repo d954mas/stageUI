@@ -49,7 +49,7 @@ end
 function Actor:change_status(status)
 	if(self.status~=status) then
 		self.status=status
-		self:update_view()
+		if(self.style_id~="no_style")then self:update_view() end
 	end
 end
 
