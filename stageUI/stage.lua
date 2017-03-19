@@ -57,6 +57,7 @@ M.__index = M
 					actor:change_status(nil)
 				end
 			end
+			return hit_happened
 		end
 
 return M
